@@ -1,5 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
   faCircleCheck, faPen, faTrashCan
 } from '@fortawesome/free-solid-svg-icons'
@@ -19,7 +19,7 @@ const ToDo = ({toDo, markDone,setUpdateData,deleteTask}) => {
                 <div className="iconsWrap">
                   <span title ="Completed/ Not Completed"
                   onClick = { (e) => markDone(task.id)}>
-                    <FontAwesomeIcon icon={faCircleCheck}/>
+                    {/* <FontAwesomeIcon icon={faCircleCheck}/> */}
                   </span>
   
                   {task.status ? null : (
@@ -29,14 +29,18 @@ const ToDo = ({toDo, markDone,setUpdateData,deleteTask}) => {
                       title: task.title,
                       status: task.status ? true: false
                     })
-                    }><FontAwesomeIcon icon={faPen}/></span>
+                    }>
+                    {/* <FontAwesomeIcon icon={faPen}/> */}
+                    </span>
   
                   )}
   
                   
   
                   <span title ="Delete"
-                  onClick={() => deleteTask(task.id)}><FontAwesomeIcon icon={faTrashCan}/></span>
+                  onClick={() => deleteTask(task.id)}>
+                    {/* <FontAwesomeIcon icon={faTrashCan}/> */}
+                    </span>
   
                 </div>
               </div>
